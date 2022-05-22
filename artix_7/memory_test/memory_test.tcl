@@ -522,4 +522,36 @@ move_dashboard_gadget -name {methodology_1} -row 2 -col 1
 # Set current dashboard to 'default_dashboard' 
 current_dashboard default_dashboard 
 
+proc number_of_processor {} {
+    global tcl_platform env
+    switch ${tcl_platform(platform)} {
+        "windows" { 
+            return $env(NUMBER_OF_PROCESSORS)       
+        }
 
+        "unix" {
+            if {![catch {open "/proc/cpuinfo"} f]} {
+                set cores [regexp -all -line {^processor\s} [read $f]]
+                close $f
+                if {$cores > 0} {
+                    return $cores
+                }
+            }
+        }
+
+        "Darwin" {
+            if {![catch {exec {*}$sysctl -n "hw.ncpu"} cores]} {
+                return $cores
+            }
+        }
+
+        default {
+            puts "Unknown System"
+            return 1
+        }
+    }
+}
+
+launch_runs synth_1 -jobs [number_of_processor]
+launch_runs impl_1 -jobs [number_of_processor]
+launch_runs impl_1 -to_step write_bitstream -jobs [number_of_processor]
