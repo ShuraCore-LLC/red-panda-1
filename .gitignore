@@ -1,2 +1,14 @@
 
 artix_7/memory_test/memory_test/
+
+artix_7/memory_test/sdk/.metadata/
+artix_7/memory_test/sdk/webtalk/
+artix_7/memory_test/sdk/RemoteSystemsTempFiles/
+artix_7/memory_test/sdk/.sdk/
+artix_7/memory_test/sdk/design_1_wrapper_hw_platform_0/
+
+artix_7/memory_test/sdk/memory_test/Debug
+
+*.o
+
+*.log
