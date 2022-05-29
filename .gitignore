@@ -8,6 +8,15 @@ artix_7/memory_test/sdk/.sdk/
 artix_7/memory_test/sdk/design_1_wrapper_hw_platform_0/
 artix_7/memory_test/sdk/memory_test/Debug
 
+artix_7/eth_port_1/eth_port_1/
+
+artix_7/eth_port_1/sdk/.metadata/
+artix_7/eth_port_1/sdk/webtalk/
+artix_7/eth_port_1/sdk/RemoteSystemsTempFiles/
+artix_7/eth_port_1/sdk/.sdk/
+artix_7/eth_port_1/sdk/design_1_wrapper_hw_platform_0/
+artix_7/eth_port_1/sdk/memory_test/Debug
+
 artix_7/eth_port_2/eth_port_2/
 
 artix_7/eth_port_2/sdk/.metadata/
@@ -16,6 +25,17 @@ artix_7/eth_port_2/sdk/RemoteSystemsTempFiles/
 artix_7/eth_port_2/sdk/.sdk/
 artix_7/eth_port_2/sdk/design_1_wrapper_hw_platform_0/
 artix_7/eth_port_2/sdk/memory_test/Debug
+
+artix_7/eth_port_3/eth_port_3/
+
+artix_7/eth_port_3/sdk/.metadata/
+artix_7/eth_port_3/sdk/webtalk/
+artix_7/eth_port_3/sdk/RemoteSystemsTempFiles/
+artix_7/eth_port_3/sdk/.sdk/
+artix_7/eth_port_3/sdk/design_1_wrapper_hw_platform_0/
+artix_7/eth_port_3/sdk/memory_test/Debug
+
+
 
 *.o
 *.a
