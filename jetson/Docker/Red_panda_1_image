@@ -1,0 +1,14 @@
+FROM pwd_base_img:v1
+
+WORKDIR /home/user
+USER user
+ENV USER user
+
+RUN sudo apt-get -y update \
+    && sudo apt-get -y upgrade \
+    && sudo apt-get -y install apt-utils python-pip \
+    lib32stdc++6 dialog lib32ncurses5-dev gcc-8 g++-8 zstd liblz4-tool
+
+RUN sudo pip install --upgrade pip
+RUN sudo pip install --upgrade virtualenv
+
